@@ -7,8 +7,17 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**",
+      },
+    ],
   },
-}
+  // Enable static optimization
+  trailingSlash: false,
+  // Compress responses
+  compress: true,
+};
 
-export default nextConfig
+export default nextConfig;
