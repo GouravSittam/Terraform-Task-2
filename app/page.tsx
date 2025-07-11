@@ -1,10 +1,16 @@
-import Image from "next/image"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Button } from "@/components/ui/button"
-import { Github, ExternalLink, Cloud, Shield, Server } from "lucide-react"
-import { SecuritySection } from "@/components/security-section"
+import Image from "next/image";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Button } from "@/components/ui/button";
+import { Github, ExternalLink, Cloud, Shield, Server } from "lucide-react";
+import { SecuritySection } from "@/components/security-section";
 
 export default function TerraformPortfolio() {
   return (
@@ -14,22 +20,40 @@ export default function TerraformPortfolio() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div>
-              <h1 className="text-3xl font-bold text-gray-900">Terraform AWS Infrastructure</h1>
-              <p className="text-gray-600 mt-1">Secure Ubuntu EC2 Instance Deployment</p>
+              <h1 className="text-3xl font-bold text-gray-900">
+                Terraform AWS Infrastructure
+              </h1>
+              <p className="text-gray-600 mt-1">
+                Secure Ubuntu EC2 Instance Deployment
+              </p>
               <div className="flex items-center gap-4 mt-2">
                 <p className="text-lg font-semibold text-blue-600">Gourav</p>
                 <span className="text-gray-400">|</span>
-                <p className="text-sm text-gray-500">Registration No: 12203224</p>
+                <p className="text-sm text-gray-500">
+                  Registration No: 12203224
+                </p>
               </div>
             </div>
             <div className="flex gap-3">
-              <Button variant="outline" size="sm">
-                <Github className="w-4 h-4 mr-2" />
-                View Code
+              <Button variant="outline" size="sm" asChild>
+                <a
+                  href="https://github.com/GouravSittam/Terraform-Task-2"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Github className="w-4 h-4 mr-2" />
+                  View Code
+                </a>
               </Button>
-              <Button size="sm">
-                <ExternalLink className="w-4 h-4 mr-2" />
-                Live Demo
+              <Button size="sm" asChild>
+                <a
+                  href="https://terraform-task-2.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  Live Demo
+                </a>
               </Button>
             </div>
           </div>
@@ -46,7 +70,8 @@ export default function TerraformPortfolio() {
                 Project Overview
               </CardTitle>
               <CardDescription>
-                Infrastructure as Code (IaC) project using Terraform to deploy a secure Ubuntu EC2 instance on AWS
+                Infrastructure as Code (IaC) project using Terraform to deploy a
+                secure Ubuntu EC2 instance on AWS
               </CardDescription>
             </CardHeader>
             <CardContent>
@@ -95,7 +120,9 @@ export default function TerraformPortfolio() {
                   <p className="text-lg text-blue-600 font-medium">Gourav</p>
                 </div>
                 <div>
-                  <h3 className="font-semibold text-gray-900 mb-2">Registration Number</h3>
+                  <h3 className="font-semibold text-gray-900 mb-2">
+                    Registration Number
+                  </h3>
                   <p className="text-lg text-blue-600 font-medium">12203224</p>
                 </div>
               </div>
@@ -105,9 +132,19 @@ export default function TerraformPortfolio() {
 
         {/* Technologies Used */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Technologies Used</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Technologies Used
+          </h2>
           <div className="flex flex-wrap gap-2">
-            {["Terraform", "AWS EC2", "Ubuntu 22.04", "Security Groups", "VPC", "SSH", "HTTPS"].map((tech) => (
+            {[
+              "Terraform",
+              "AWS EC2",
+              "Ubuntu 22.04",
+              "Security Groups",
+              "VPC",
+              "SSH",
+              "HTTPS",
+            ].map((tech) => (
               <Badge key={tech} variant="secondary" className="px-3 py-1">
                 {tech}
               </Badge>
@@ -128,7 +165,9 @@ export default function TerraformPortfolio() {
             <Card>
               <CardHeader>
                 <CardTitle>Terraform Configuration</CardTitle>
-                <CardDescription>Complete infrastructure definition for secure EC2 deployment</CardDescription>
+                <CardDescription>
+                  Complete infrastructure definition for secure EC2 deployment
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="bg-gray-900 rounded-lg p-6 overflow-x-auto">
@@ -239,7 +278,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Terraform Init</CardTitle>
-                  <CardDescription>Initialize Terraform working directory</CardDescription>
+                  <CardDescription>
+                    Initialize Terraform working directory
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -255,7 +296,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Terraform Plan</CardTitle>
-                  <CardDescription>Review infrastructure changes</CardDescription>
+                  <CardDescription>
+                    Review infrastructure changes
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -271,7 +314,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Terraform Apply</CardTitle>
-                  <CardDescription>Deploy infrastructure to AWS</CardDescription>
+                  <CardDescription>
+                    Deploy infrastructure to AWS
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -287,7 +332,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Validation Success</CardTitle>
-                  <CardDescription>Configuration validated successfully</CardDescription>
+                  <CardDescription>
+                    Configuration validated successfully
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -307,7 +354,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>EC2 Instances Dashboard</CardTitle>
-                  <CardDescription>AWS Console showing deployed instances</CardDescription>
+                  <CardDescription>
+                    AWS Console showing deployed instances
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -323,7 +372,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Instance Details</CardTitle>
-                  <CardDescription>Detailed view of the deployed EC2 instance</CardDescription>
+                  <CardDescription>
+                    Detailed view of the deployed EC2 instance
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -359,7 +410,9 @@ output "instance_public_ip" {
               <Card>
                 <CardHeader>
                   <CardTitle>Destroy Confirmation</CardTitle>
-                  <CardDescription>Resources successfully destroyed</CardDescription>
+                  <CardDescription>
+                    Resources successfully destroyed
+                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <Image
@@ -377,14 +430,21 @@ output "instance_public_ip" {
 
         {/* Key Features */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Key Features</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Key Features
+          </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Automated AMI Selection</CardTitle>
+                <CardTitle className="text-lg">
+                  Automated AMI Selection
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Dynamically fetches the latest Ubuntu 22.04 LTS AMI from Canonical</p>
+                <p className="text-gray-600">
+                  Dynamically fetches the latest Ubuntu 22.04 LTS AMI from
+                  Canonical
+                </p>
               </CardContent>
             </Card>
 
@@ -394,17 +454,23 @@ output "instance_public_ip" {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600">
-                  Configured for SSH (port 22) and HTTPS (port 443) access with proper ingress/egress rules
+                  Configured for SSH (port 22) and HTTPS (port 443) access with
+                  proper ingress/egress rules
                 </p>
               </CardContent>
             </Card>
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Default VPC Integration</CardTitle>
+                <CardTitle className="text-lg">
+                  Default VPC Integration
+                </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Utilizes AWS default VPC for simplified networking configuration</p>
+                <p className="text-gray-600">
+                  Utilizes AWS default VPC for simplified networking
+                  configuration
+                </p>
               </CardContent>
             </Card>
 
@@ -413,7 +479,9 @@ output "instance_public_ip" {
                 <CardTitle className="text-lg">Public IP Assignment</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Automatically assigns public IP for internet accessibility</p>
+                <p className="text-gray-600">
+                  Automatically assigns public IP for internet accessibility
+                </p>
               </CardContent>
             </Card>
 
@@ -422,7 +490,9 @@ output "instance_public_ip" {
                 <CardTitle className="text-lg">SSH Key Integration</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Configurable SSH key pair for secure instance access</p>
+                <p className="text-gray-600">
+                  Configurable SSH key pair for secure instance access
+                </p>
               </CardContent>
             </Card>
 
@@ -431,7 +501,9 @@ output "instance_public_ip" {
                 <CardTitle className="text-lg">Resource Tagging</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">Proper resource tagging for organization and cost management</p>
+                <p className="text-gray-600">
+                  Proper resource tagging for organization and cost management
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -439,7 +511,9 @@ output "instance_public_ip" {
 
         {/* Project Workflow */}
         <section className="mt-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Project Workflow</h2>
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">
+            Project Workflow
+          </h2>
           <Card>
             <CardContent className="pt-6">
               <div className="space-y-4">
@@ -450,8 +524,11 @@ output "instance_public_ip" {
                   <div>
                     <h3 className="font-semibold">Initialize Terraform</h3>
                     <p className="text-gray-600">
-                      Run <code className="bg-gray-100 px-2 py-1 rounded">terraform init</code> to initialize the
-                      working directory
+                      Run{" "}
+                      <code className="bg-gray-100 px-2 py-1 rounded">
+                        terraform init
+                      </code>{" "}
+                      to initialize the working directory
                     </p>
                   </div>
                 </div>
@@ -462,7 +539,11 @@ output "instance_public_ip" {
                   <div>
                     <h3 className="font-semibold">Validate Configuration</h3>
                     <p className="text-gray-600">
-                      Run <code className="bg-gray-100 px-2 py-1 rounded">terraform validate</code> to check syntax
+                      Run{" "}
+                      <code className="bg-gray-100 px-2 py-1 rounded">
+                        terraform validate
+                      </code>{" "}
+                      to check syntax
                     </p>
                   </div>
                 </div>
@@ -473,7 +554,11 @@ output "instance_public_ip" {
                   <div>
                     <h3 className="font-semibold">Plan Infrastructure</h3>
                     <p className="text-gray-600">
-                      Run <code className="bg-gray-100 px-2 py-1 rounded">terraform plan</code> to review changes
+                      Run{" "}
+                      <code className="bg-gray-100 px-2 py-1 rounded">
+                        terraform plan
+                      </code>{" "}
+                      to review changes
                     </p>
                   </div>
                 </div>
@@ -484,7 +569,11 @@ output "instance_public_ip" {
                   <div>
                     <h3 className="font-semibold">Deploy Infrastructure</h3>
                     <p className="text-gray-600">
-                      Run <code className="bg-gray-100 px-2 py-1 rounded">terraform apply</code> to create resources
+                      Run{" "}
+                      <code className="bg-gray-100 px-2 py-1 rounded">
+                        terraform apply
+                      </code>{" "}
+                      to create resources
                     </p>
                   </div>
                 </div>
@@ -495,7 +584,11 @@ output "instance_public_ip" {
                   <div>
                     <h3 className="font-semibold">Clean Up</h3>
                     <p className="text-gray-600">
-                      Run <code className="bg-gray-100 px-2 py-1 rounded">terraform destroy</code> to remove resources
+                      Run{" "}
+                      <code className="bg-gray-100 px-2 py-1 rounded">
+                        terraform destroy
+                      </code>{" "}
+                      to remove resources
                     </p>
                   </div>
                 </div>
@@ -509,11 +602,16 @@ output "instance_public_ip" {
       <footer className="bg-white border-t mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <div className="text-center text-gray-600">
-            <p className="font-semibold text-gray-800 mb-2">Gourav - Registration No: 12203224</p>
-            <p>© 2024 Terraform AWS Infrastructure Project. Built with Next.js and Tailwind CSS.</p>
+            <p className="font-semibold text-gray-800 mb-2">
+              Gourav - Registration No: 12203224
+            </p>
+            <p>
+              © 2024 Terraform AWS Infrastructure Project. Built with Next.js
+              and Tailwind CSS.
+            </p>
           </div>
         </div>
       </footer>
     </div>
-  )
+  );
 }
