@@ -18,6 +18,7 @@ This repository does **NOT** contain any AWS credentials or sensitive informatio
    aws configure
    \`\`\`
 
+
 2. **Environment Variables:**
    \`\`\`bash
    export AWS_ACCESS_KEY_ID=your_access_key
